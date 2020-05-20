@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Ch_04_04_Waiting_For_Elements_Before" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-20T03:37:01" hostname="Vita" time="14.474">
+<testsuite name="Ch_04_04_Waiting_For_Elements_Before" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-20T03:46:47" hostname="Vita" time="20.503">
   <properties/>
-  <testcase name="test" classname="Ch_04_04_Waiting_For_Elements_Before" time="14.474"/>
+  <testcase name="test" classname="Ch_04_04_Waiting_For_Elements_Before" time="20.503"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[May 19, 2020 10:37:11 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+  <system-err><![CDATA[May 19, 2020 10:46:59 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

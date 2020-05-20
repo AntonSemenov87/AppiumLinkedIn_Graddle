@@ -39,7 +39,25 @@ public class Ch_04_04_Waiting_For_Elements_Before {
     @Test
     public void test() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Login Screen")));
+        WebElement screen = wait.until(
+                ExpectedConditions.presenceOfElementLocated(
+                        MobileBy.AccessibilityId("Login Screen")));
+        screen.click();
+
+        WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("username")));
+        username.sendKeys("alice");
+
+        WebElement password = driver.findElement(MobileBy.AccessibilityId("password"));
+        password.sendKeys("mypassword");
+
+        WebElement login = driver.findElement(MobileBy.AccessibilityId("loginBtn"));
+        login.click();
+
+        WebElement loginText = wait.until(ExpectedConditions.presenceOfElementLocated(
+                MobileBy.xpath("//android.widget.TextView[contains(@text, 'You are logged in')]")));
+
+        assert(loginText.getText().contains("alice"));
+
 
     }
 }
