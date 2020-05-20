@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Ch_04_09_Solution_Before" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-20T13:46:15" hostname="Vita" time="20.885">
+<testsuite name="Ch_04_09_Solution_Before" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-20T16:01:49" hostname="Vita" time="23.333">
   <properties/>
-  <testcase name="test" classname="Ch_04_09_Solution_Before" time="20.885"/>
-  <system-out><![CDATA[Pass
+  <testcase name="test" classname="Ch_04_09_Solution_Before" time="23.333"/>
+  <system-out><![CDATA[Pass: Anton Semenov
+Pass: Vita Bezruchko
 ]]></system-out>
-  <system-err><![CDATA[May 20, 2020 8:46:30 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+  <system-err><![CDATA[May 20, 2020 11:02:05 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

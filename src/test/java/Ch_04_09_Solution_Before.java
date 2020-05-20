@@ -37,24 +37,40 @@ public class Ch_04_09_Solution_Before {
     public void test() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
-        String textToEnter = "Anton Semenov";
+        String textToEnter1 = "Anton Semenov";
 
         wait.until(ExpectedConditions.presenceOfElementLocated(
                 MobileBy.AccessibilityId("Echo Box"))).click();
 
         WebElement textInput = wait.until(ExpectedConditions.presenceOfElementLocated(
                 MobileBy.AccessibilityId("messageInput")));
-        textInput.sendKeys(textToEnter);
+        textInput.sendKeys(textToEnter1);
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(
-                "messageSaveBtn"))).click();
+        // entering first text
+        WebElement saveButton = wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(
+                "messageSaveBtn")));
+        saveButton.click();
 
         WebElement textToCheck = wait.until(ExpectedConditions.presenceOfElementLocated(
-                MobileBy.AccessibilityId(textToEnter)));
+                MobileBy.AccessibilityId(textToEnter1)));
 
         String actualText = textToCheck.getText();
-        assert(actualText.contains(textToEnter));
-        System.out.println("Pass");
+        assert(actualText.contains(textToEnter1));
+        System.out.println("Pass: " + actualText);
+
+
+        // entering second text
+        String textToEnter2 = "Vita Bezruchko";
+
+        textInput.sendKeys(textToEnter2);
+        saveButton.click();
+
+        textToCheck = wait.until(ExpectedConditions.presenceOfElementLocated(
+                MobileBy.AccessibilityId(textToEnter2)));
+
+        actualText = textToCheck.getText();
+        assert (actualText.contains(textToEnter2));
+        System.out.println("Pass: " + actualText);
 
     }
 }
