@@ -7,10 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Ch_04_04_Waiting_For_Elements_Before {
 
-    private static final String APP = "https://github.com/cloudgrey-io/the-app/releases/download/v1.9.0/TheApp-v1.9.0.apk";
+    private static final String APP = "C:\\Users\\Antho\\Desktop\\TheApp-v1.9.0.apk";
     private static final String APPIUM = "http://localhost:4723/wd/hub";
 
     private AndroidDriver driver;
@@ -19,8 +21,8 @@ public class Ch_04_04_Waiting_For_Elements_Before {
     public void setUp() throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "9");
-        caps.setCapability("deviceName", "Android Emulator");
+        caps.setCapability("platformVersion", "10");
+        caps.setCapability("deviceName", "Pixel XL");
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("app", APP);
         driver = new AndroidDriver(new URL(APPIUM), caps);
@@ -36,8 +38,8 @@ public class Ch_04_04_Waiting_For_Elements_Before {
 
     @Test
     public void test() {
-        driver.findElement(MobileBy.AccessibilityId("Login Screen"));
-        List<WebElement> elements = driver.findElements(MobileBy.AccessibilityId("Login Screen"));
-        System.out.println(elements.size());
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Login Screen")));
+
     }
 }
