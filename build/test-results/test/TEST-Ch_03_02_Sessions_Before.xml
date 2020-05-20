@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ch_03_02_Sessions_Before" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-20T03:11:58" hostname="Vita" time="13.123">
+  <properties/>
+  <testcase name="test" classname="Ch_03_02_Sessions_Before" time="13.123"/>
+  <system-out><![CDATA[This is test runner check
+]]></system-out>
+  <system-err><![CDATA[May 19, 2020 10:12:09 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
