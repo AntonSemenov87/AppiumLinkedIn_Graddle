@@ -40,6 +40,9 @@ public class Ch_04_06_Page_Source_Before {
         WebElement screen = wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Login Screen")));
         screen.click();
 
+        try { Thread.sleep(1000); } catch (Exception ign) {}
+        System.out.println(driver.getPageSource());
+
 
 
 
