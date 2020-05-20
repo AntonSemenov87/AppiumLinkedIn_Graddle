@@ -50,7 +50,11 @@ public class Ch_04_09_Solution_Before {
                 "messageSaveBtn"))).click();
 
         WebElement textToCheck = wait.until(ExpectedConditions.presenceOfElementLocated(
-                MobileBy.AccessibilityId("Anton Semenov")));
+                MobileBy.AccessibilityId(textToEnter)));
+
+        String actualText = textToCheck.getText();
+        assert(actualText.contains(textToEnter));
+        System.out.println("Pass");
 
     }
 }
